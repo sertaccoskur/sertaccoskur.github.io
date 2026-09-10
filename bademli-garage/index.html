@@ -76,11 +76,6 @@
   </div>
 </header>
 
-<!-- ================= TICKER ================= -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack"></div>
-</div>
-
 <!-- ================= SÖZ ================= -->
 <section class="section" style="padding-block:0">
   <div class="promise">
@@ -722,24 +717,6 @@ ppfBtn.addEventListener("click", function(){
 });
 
 paint();
-
-/* ---------------------------------------------------------
-   TICKER
---------------------------------------------------------- */
-var TICK = [
-  { t:"Oracal 970 · Ice Blue 056G", c:"#A6C1D2" },
-  { t:"Oracal · Nardo Gri",          c:"#9DA09E" },
-  { t:"Hexis · Gloss Blood Red",     c:"#8E1218" },
-  { t:"Oracal 970 · 961 Kırmızı",    c:"#D5121F" },
-  { t:"Şeffaf PPF · TPU",            c:"#E8EEF2" },
-  { t:"Cam Filmi",                   c:"#3A3E44" },
-  { t:"Facelift & Body Kit",         c:"#FCEC04" }
-];
-var track = document.getElementById("tickerTrack");
-var half = TICK.map(function(x){
-  return '<span class="ticker-item"><i style="background:' + x.c + '"></i>' + x.t + '</span>';
-}).join("");
-track.innerHTML = half + half;
 
 /* ---------------------------------------------------------
    NAV + REVEAL

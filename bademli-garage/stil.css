@@ -190,28 +190,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 .d4{transition-delay:.32s}.d5{transition-delay:.40s}
 
-/* ---------- TICKER ---------- */
-.ticker{
-  border-block:1px solid var(--line-soft);background:var(--ink-2);
-  overflow:hidden;padding-block:15px;position:relative;
-}
-.ticker::before,.ticker::after{
-  content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none;
-}
-.ticker::before{left:0;background:linear-gradient(90deg,var(--ink-2),transparent)}
-.ticker::after{right:0;background:linear-gradient(270deg,var(--ink-2),transparent)}
-.ticker-track{display:flex;width:max-content;animation:slide 46s linear infinite}
-.ticker:hover .ticker-track{animation-play-state:paused}
-@keyframes slide{to{transform:translateX(-50%)}}
-.ticker-item{
-  display:flex;align-items:center;gap:12px;padding-inline:26px;
-  font-family:var(--mono);font-size:12px;letter-spacing:.11em;
-  text-transform:uppercase;color:var(--fg-3);white-space:nowrap;
-}
-.ticker-item i{width:9px;height:9px;border-radius:50%;flex:none;font-style:normal}
-
 /* ---------- SÖZ / PROMISE ---------- */
-.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft)}
+/* üst hat: kaldırılan kayan şeridin bıraktığı ayırıcıyı karşılıyor */
+.promise{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line-soft);border-top:1px solid var(--line-soft);
+}
 .promise-cell{background:var(--ink);padding:clamp(28px,4vw,44px) clamp(20px,3vw,36px)}
 .promise-cell .n{
   font-family:var(--mono);font-size:11px;color:var(--accent);
